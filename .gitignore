@@ -1,0 +1,8 @@
+# Hugging Face cache
+.hf_cache
+
+# Python Cache files
+*__pycache__/
+
+# Environment files
+.env
