@@ -9,3 +9,7 @@
 
 # Document Files
 *files
+
+# ----------- WebPageChatbot ----------
+WebPageChatbot/server/db
+WebPageChatbot/server/*.ipynb
