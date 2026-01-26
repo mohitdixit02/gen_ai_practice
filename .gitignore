@@ -9,11 +9,3 @@
 
 # Document Files
 *files
-
-# ----------- WebPageChatbot ----------
-WebPageChatbot/server/db
-WebPageChatbot/server/*.ipynb
-
-WebPageChatbot/webchatbot/node_modules/
-WebPageChatbot/webchatbot/build/
-WebPageChatbot/webchatbot/package-lock.json
