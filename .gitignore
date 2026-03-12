@@ -9,3 +9,6 @@
 
 # Document Files
 *files
+
+# vscode settings
+.vscode/
