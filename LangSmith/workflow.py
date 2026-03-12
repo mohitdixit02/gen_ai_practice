@@ -72,12 +72,16 @@ class Workflow:
     def invoke_workflow(self):
         print("Invoking the workflow...")
         Workflow = self.build_graph()
-        res = Workflow.invoke(
+       
+        for state in Workflow.stream(
             input=StoryState(topic="", title="", content=""),
-            config=LANGSMITH_TRACE_CONFIG
-        )
-        print("*********************************")
-        print("Query Topic: ", res["topic"])
-        print("Result Title: ", res["title"])
-        print("Result Content: ", res["content"])
+            config=LANGSMITH_TRACE_CONFIG,
+            stream_mode="values"
+        ):
+            print("\n--- Current Story State ---")
+            print(f"Topic: {state.get('topic', '')}")
+            print(f"Title: {state.get('title', '')}")
+
+            content = state.get("content", "")
+            print(content)
     
